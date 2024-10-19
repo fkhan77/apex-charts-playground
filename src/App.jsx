@@ -90,14 +90,13 @@ function App() {
   };
   }, [])
 
-
   useEffect(() => {new ApexCharts(document.querySelector("#line-chart"), lineChartOptions).render()}, [lineChartOptions])
 
   useEffect(() => { new ApexCharts(document.querySelector("#area-chart"), areaChartOptions).render()}, [areaChartOptions])
 
 
   return (
-    <div id='container' style={{display:'flex', width: '100vw'}}>
+    <div id='container' style={{display:'flex', width: '100vw', flexWrap: 'wrap'}}>
       <div id="line-chart" style={{height: 'auto', width: '30vw'}}></div>
       <div id="area-chart" style={{height: 'auto', width: '70vw'}}></div>
     </div>
